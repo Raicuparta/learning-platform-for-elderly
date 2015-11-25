@@ -188,3 +188,7 @@ footer {
   margin-left: 250px;
   border: 0px;
 }
+
+.chat-button {
+    float: right;
+}
