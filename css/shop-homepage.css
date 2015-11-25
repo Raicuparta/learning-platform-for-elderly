@@ -67,8 +67,7 @@ footer {
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    margin-left: 80px;
-    margin-right: 80px;
+    margin-left: 60px;
 }
 
 #wrapper.toggled {
