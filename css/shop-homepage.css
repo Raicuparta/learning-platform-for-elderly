@@ -197,3 +197,7 @@ footer {
 .chat-button {
     float: right;
 }
+
+.dropdown-menu {
+    padding: 10px;
+}
