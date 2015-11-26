@@ -206,3 +206,7 @@ footer {
 .popular-button:hover {
   background: #AAA;
 }
+
+.dropdown-menu-static {
+    display: block;
+}
