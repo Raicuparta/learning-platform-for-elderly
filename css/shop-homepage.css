@@ -198,9 +198,30 @@ footer {
     float: right;
 }
 
+/*blue*/
+.btn-primary.raised {
+    box-shadow: 0 5px 0 0 #0e455f;
+}
 
-.dropdown-menu {
-    padding: 10px;
+.btn-primary.raised:active, .btn-primary.raised.active {
+    box-shadow: none;
+    margin-bottom: -5px;
+    margin-top: 5px;
+}
+
+/*red*/
+.btn-danger.raised {
+    box-shadow: 0 5px 0 0 #b00000;
+}
+
+.btn-danger.raised:active, .btn-danger.raised.active {
+    box-shadow: none;
+    margin-bottom: -5px;
+    margin-top: 5px;
+}
+
+.popular-button:hover {
+  background: #AAA;
 }
 
 .popular-button:hover {

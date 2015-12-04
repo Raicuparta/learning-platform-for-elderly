@@ -59,10 +59,10 @@
                   <a>Login</a>
               </li>
               <li>
-                  <a href="logged.html"><button class="btn">Facebook</button></a>
+                  <button style="width:80%" class="btn btn-primary raised" data-toggle="modal" data-target="#facebookModal">Facebook</button>    
               </li>
               <li>
-                  <a href="logged.html"><button class="btn">Google</button></a>
+                  <button style="width:80%" class="btn btn-danger raised" data-toggle="modal" data-target="#googleModal">Google</button>
               </li>
           </ul>
       </div>
@@ -70,6 +70,66 @@
 
     <!-- Page Content -->
     <div class="container" id="wrapper">
+
+       <!-- Facebook Modal -->
+      <div class="modal fade" id="facebookModal" role="dialog">
+        <div class="modal-dialog">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title text-center">Facebook</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                  <label for="usr">Nome:</label>
+                  <input type="text" class="form-control" id="usr">
+                </div>
+                <div class="form-group">
+                  <label for="pwd">Palavra-passe:</label>
+                  <input type="password" class="form-control" id="pwd">
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Sair</button>
+              <a href="logged.html"><button class="btn btn-default">Entrar</button></a>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+      <!-- Google Modal -->
+      <div class="modal fade" id="googleModal" role="dialog">
+        <div class="modal-dialog">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title text-center">Google</h4>
+            </div>
+            <div class="modal-body">
+              <div class="modal-body">
+                <div class="form-group">
+                  <label for="usr">Nome:</label>
+                  <input type="text" class="form-control" id="usr">
+                </div>
+                <div class="form-group">
+                  <label for="pwd">Palavra-passe:</label>
+                  <input type="password" class="form-control" id="pwd">
+                </div>
+            </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Sair</button>
+              <a href="logged.html"><button class="btn btn-default">Entrar</button></a>
+            </div>
+          </div>
+          
+        </div>
+      </div>
 
         <div>
             <div class="text-center">
