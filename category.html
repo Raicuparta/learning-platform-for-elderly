@@ -28,11 +28,93 @@
 <body>
 
   <script type="text/javascript">
-    var type = window.location.hash.substr(1)
-    console.log(type)
+    var cat = window.location.hash.substr(1)
+    var title = []
+    var description = []
+    var image = []
+
+    switch (cat) {
+      case "Línguas":
+        title[0] = "Inglês"
+        description[0] = "Curso completo de Inglês"
+        image[0] = "images/uk.jpg"
+
+        title[1] = "Francês"
+        description[1] = "Curso completo de Francês"
+        image[1] = "images/france.jpg"
+
+        title[2] = "Espanhol"
+        description[2] = "Curso completo de Espanhol"
+        image[2] = "images/spain.jpg"
+
+        title[3] = "Alemão"
+        description[3] = "Curso completo de Alemão"
+        image[3] = "images/german.jpg"
+      break
+
+      case "Artes":
+        title[0] = "Música"
+        description[0] = "Curso de música"
+        image[0] = "images/uk.jpg"
+
+        title[1] = "Desenho"
+        description[1] = "Curso de desenho"
+        image[1] = "images/france.jpg"
+
+        title[2] = "Esculptura"
+        description[2] = "Curso de esculptura"
+        image[2] = "images/spain.jpg"
+
+        title[3] = "Olaria"
+        description[3] = "Aprender olaria"
+        image[3] = "images/german.jpg"
+      break
+
+      case "Ciências":
+        title[0] = "Matemática"
+        description[0] = "Curso de Matemática"
+        image[0] = "images/uk.jpg"
+
+        title[1] = "Física"
+        description[1] = "Curso de Física"
+        image[1] = "images/france.jpg"
+
+        title[2] = "Química"
+        description[2] = "Curso deQuímica"
+        image[2] = "images/spain.jpg"
+
+        title[3] = "Biologia"
+        description[3] = "Curso de Biologia"
+        image[3] = "images/german.jpg"        
+      break
+
+      case "Hobbies":
+        title[0] = "Corte e costura"
+        description[0] = "Curso de corte e costura"
+        image[0] = "images/uk.jpg"
+
+        title[1] = "Jardinagem"
+        description[1] = "Curso de jardinagem"
+        image[1] = "images/france.jpg"
+
+        title[2] = "Macramé"
+        description[2] = "Curso de macramé"
+        image[2] = "images/spain.jpg"
+
+        title[3] = "Yoga"
+        description[3] = "Curso de yoga"
+        image[3] = "images/german.jpg"     
+      break
+    }
 
     window.onload = function() {
-      document.getElementById("pageTitle").innerHTML= "Cursos de " + type
+      document.getElementById("pageTitle").innerHTML = "Cursos de " + cat
+
+      for (var i = 0; i < title.length; i++) {
+        document.getElementById("title" + i).innerHTML = title[i]
+        document.getElementById("desc" + i).innerHTML = description[i]
+        document.getElementById("img" + i).src = image[i]
+      }
     } 
   </script>
 
@@ -88,12 +170,11 @@
                     <a href="class.html" class="list-group-item">
                         <div class="row">
                             <div class="col-md-4">
-                                <img class="slide-image" src="images/uk.jpg" width="100" height="150">
+                                <img id="img0" class="slide-image" width="100" height="150">
                             </div>
                             <div class="col-md-8">
-                                <h6> Inglês - Curso completo de Inglês</h6>
-                                <p style="font-size:18px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida, neque a ornare porttitor
-                                </p>
+                                <h6 id="title0">Title 0</h6>
+                                <p style="font-size:18px" id="desc0">Description 0</p>
                             </div>
                             <div class="col-md-4">
                                 <p style="font-size:18px">Aulas: 10 aulas</p>
@@ -107,14 +188,12 @@
                     <a href="class.html" class="list-group-item">
                         <div class="row">
                             <div class="col-md-4">
-                                <img class="slide-image" src="images/france.jpg" width="100" height="150">
+                                <img id="img1" class="slide-image" width="100" height="150">
                             </div>
                             <div class="col-md-8">
-                                <h6> Francês - Curso completo de Francês
-                                </h6>
-                                <p style="font-size:18px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida, neque a ornare porttitor
-                                </p>
-                            </div>
+                                <h6 id="title1">Title 1</h6>
+                                <p style="font-size:18px" id="desc1">Description 1</p>
+                            </div>                            
                             <div class="col-md-4">
                                 <p style="font-size:18px">Aulas: 8 aulas</p>
                             </div>
@@ -127,13 +206,11 @@
                     <a href="class.html" class="list-group-item">
                         <div class="row">
                             <div class="col-md-4">
-                                <img class="slide-image" src="images/spain.jpg" width="100" height="150">
+                                <img id="img2" class="slide-image" width="100" height="150">
                             </div>
                             <div class="col-md-8">
-                                <h6> Espanhol - Curso completo de Espanhol
-                                </h6>
-                                <p style="font-size:18px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida, neque a ornare porttitor
-                                </p>
+                                <h6 id="title2">Title 2</h6>
+                                <p style="font-size:18px" id="desc2">Description 2</p>
                             </div>
                             <div class="col-md-4">
                                 <p style="font-size:18px">Aulas: 8 aulas</p>
@@ -147,13 +224,11 @@
                     <a href="class.html" class="list-group-item">
                         <div class="row">
                             <div class="col-md-4">
-                                <img class="slide-image" src="images/german.jpg" width="100" height="150">
+                                <img id="img3" class="slide-image" width="100" height="150">
                             </div>
                             <div class="col-md-8">
-                                <h6> Alemão - Curso completo de Alemão
-                                </h6>
-                                <p style="font-size:18px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida, neque a ornare porttitor
-                                </p>
+                                <h6 id="title3">Title 3</h6>
+                                <p style="font-size:18px" id="desc3">Description 3</p>
                             </div>
                             <div class="col-md-4">
                                 <p style="font-size:18px">Aulas: 8 aulas</p>
