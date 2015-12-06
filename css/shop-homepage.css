@@ -235,6 +235,14 @@ footer {
     display: block;
 }
 
+.dropdown-menu {
+    padding: 10px;
+}
+
+.chat-button {
+    font-size: 80%;
+}
+
 .videoWrapper {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 */
@@ -254,4 +262,8 @@ footer {
     position: relative;
     padding-bottom: 43%; /* 16:9 */
     height: 0;
+}
+
+.chat-button {
+    float: right;
 }
