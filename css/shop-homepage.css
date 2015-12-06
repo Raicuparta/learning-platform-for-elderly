@@ -201,26 +201,15 @@ footer {
     right: 0;
 }
 
-/*blue*/
-.btn-primary.raised {
-    box-shadow: 0 5px 0 0 #0e455f;
-}
-
-.btn-primary.raised:active, .btn-primary.raised.active {
+.btn:active, .btn.active {
     box-shadow: none;
     margin-bottom: -5px;
     margin-top: 5px;
 }
 
-/*red*/
-.btn-danger.raised {
-    box-shadow: 0 5px 0 0 #b00000;
-}
-
-.btn-danger.raised:active, .btn-danger.raised.active {
-    box-shadow: none;
-    margin-bottom: -5px;
-    margin-top: 5px;
+.btn {
+    box-shadow: inset 0px -4px 0px 1px rgba(0,0,0,0.4);
+    border:0;
 }
 
 .popular-button:hover {
@@ -245,7 +234,7 @@ footer {
 
 .videoWrapper {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
+    padding-bottom: 56.25%;
     padding-top: 25px;
     height: 0;
     background-color: black;
@@ -260,7 +249,7 @@ footer {
 
 .video-side {
     position: relative;
-    padding-bottom: 43%; /* 16:9 */
+    padding-bottom: 43%;
     height: 0;
 }
 
