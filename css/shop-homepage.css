@@ -256,3 +256,11 @@ footer {
 .chat-button {
     float: right;
 }
+
+.text-danger {
+  color: #ffffff;
+}
+
+.bg-danger {
+  background-color: #d9534f;
+}
