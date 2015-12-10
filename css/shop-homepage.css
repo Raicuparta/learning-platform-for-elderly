@@ -129,7 +129,7 @@ footer {
 
 .sidebar-nav li a button {
     width: 200px;
-    color: #222;
+    color: #2f416a;
 }
 
 .sidebar-nav li a button:hover {
@@ -169,7 +169,7 @@ footer {
 
     #sidebar-wrapper {
         width: 250px;
-        background: #222;
+        background: #2f416a;
     }
 
     #wrapper.toggled #sidebar-wrapper {
@@ -210,6 +210,10 @@ footer {
 .btn {
     box-shadow: inset 0px -4px 0px 1px rgba(0,0,0,0.4);
     border:0;
+}
+
+.btn-default {
+    background-color: white;
 }
 
 .popular-button:hover {
@@ -267,4 +271,8 @@ footer {
 
 .hidden {
     display: none;
+}
+
+.navbar-inverse {
+    background-color: #2f416a;
 }
