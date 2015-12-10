@@ -259,6 +259,11 @@ footer {
 
 .chat-button {
     float: right;
+    min-height: 65px;
+}
+
+.send-button {
+    float: right;
 }
 
 .text-danger {
