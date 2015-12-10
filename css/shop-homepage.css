@@ -281,3 +281,25 @@ footer {
 .navbar-inverse {
     background-color: #2f416a;
 }
+
+::-webkit-scrollbar {
+    width: 2em;
+    height: 1em
+}
+
+::-webkit-scrollbar-button:vertical:increment {
+    background-image: url("buttonDown.png");}
+
+::-webkit-scrollbar-button:vertical:decrement {
+    background-image: url("buttonUp.png");
+}
+::-webkit-scrollbar-button {
+    height: 35px;
+    background: #ccc
+}
+::-webkit-scrollbar-track-piece {
+    background: #eee
+}
+::-webkit-scrollbar-thumb {
+    background: #888
+}​
