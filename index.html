@@ -27,6 +27,17 @@
 </head>
 
 <body>
+   <script type="text/javascript">
+    var logged = window.location.hash.substr(1)
+    window.onload = function() {
+      if (logged === "logged") {
+        document.getElementById("login").className = "hidden"
+        document.getElementById("profile").className = ""
+      }
+
+    } 
+  </script>
+
   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
           <!-- Brand and toggle get grouped for better mobile display -->
@@ -55,15 +66,28 @@
               <li>
                   <a href="index.html"><button class="btn">Página Inicial</button></a>
               </li>
-              <li>
-                  <a>Entrar na conta:</a>
-              </li>
-              <li>
-                  <button style="width:80%" class="btn btn-primary raised" data-toggle="modal" data-target="#facebookModal">Facebook</button>
-              </li>
-              <li>
-                  <button style="width:80%" class="btn btn-danger raised" data-toggle="modal" data-target="#googleModal">Google</button>
-              </li>
+              <div id="login">
+                <li>
+                    <a>Entrar na conta:</a>
+                </li>
+                <li>
+                    <button style="width:80%" class="btn btn-primary raised" data-toggle="modal" data-target="#facebookModal">Facebook</button>
+                </li>
+                <li>
+                    <button style="width:80%" class="btn btn-danger raised" data-toggle="modal" data-target="#googleModal">Google</button>
+                </li>
+              </div>
+              <div id="profile" class="hidden">
+                <li>
+                    <a>Perfil</a>
+                </li>
+                <li>
+                    <a href="profile.html"><button class="btn">Os meus cursos</button></a>
+                </li>
+                <li>
+                    <a href="index.html"><button class="btn">Sair</button></a>
+                </li>
+              </div>
           </ul>
       </div>
       <!-- /#sidebar-wrapper -->
@@ -93,7 +117,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-primary" data-dismiss="modal">Sair</button>
-              <a href="logged.html"><button class="btn btn-success">Entrar</button></a>
+              <a href="?#logged"><button class="btn btn-success">Entrar</button></a>
             </div>
           </div>
 
@@ -124,7 +148,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-primary" data-dismiss="modal">Sair</button>
-              <a href="logged.html"><button class="btn btn-success">Entrar</button></a>
+              <a href="./index.html#logged"><button class="btn btn-success">Entrar</button></a>
             </div>
           </div>
 

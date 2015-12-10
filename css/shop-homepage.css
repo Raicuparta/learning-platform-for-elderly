@@ -264,3 +264,7 @@ footer {
 .bg-danger {
   background-color: #d9534f;
 }
+
+.hidden {
+    display: none;
+}
