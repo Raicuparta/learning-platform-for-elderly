@@ -88,15 +88,15 @@
               <div class="col-sm-3 col-lg-3 col-md-3 video-side">
                   <a class="btn btn-warning" href="classOwned.html"><h5>Próxima aula<br>Aula 2</h5><img src="images/nextClass.jpg" class="slide-image" width="100" height="100"></a>
                   <br></br>
-                  <div class="dropup">
-                    <button class="btn btn-primary dropdown-toggle chat-button" type="button" id="menu1" data-toggle="dropdown">
-                      <h6>Contactar Professor <span class="caret"></span></h6>
-                      
+                   <div class="dropup">
+                    <button class="btn btn-primary dropdown-toggle chat-button" type="button" id="menu1" onclick="toggleDiv();">
+                      <span class="glyphicon glyphicon-comment"></span> Contactar Professor <span class="caret"></span>
                     </button>
-                    <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="menu1">
-                        <h6>Professor: Boa tarde!</h6>
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="menu1" id="dropdown">
+                        <h6 id="quote">Professor: Boa Tarde!</h6>
+                        <h6 id="answer"></h6>
                         <input autofocus type="text" class="form-control" id="chatBox" placeholder="Mensagem">
-                        <a  href="classStatic.html" class="btn btn-primary chat-button">Enviar</a>
+                        <button class="btn btn-primary send-button" onclick="send();">Enviar</button>
                     </ul>
                   </div>
               </div>
@@ -197,6 +197,7 @@
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
+    <script src="js/chat.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
