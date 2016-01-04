@@ -29,10 +29,49 @@
 
   <script type="text/javascript">
     var title = window.location.hash.substr(1)
+    var cat = ''
+
+    switch (title) {
+      case 'Inglês':
+      case 'Francês':
+      case 'Espanhol':
+      case 'Alemão':
+
+      cat = 'Línguas'
+      break
+
+      case 'Música':
+      case 'Desenho':
+      case 'Esculptura':
+      case 'Olaria':
+
+      cat = 'Artes'
+      break
+
+      case 'Matemática':
+      case 'Física':
+      case 'Química':
+      case 'História':
+      case 'Biologia':
+
+      cat = 'Ciências'
+      break
+
+      case 'Corte e costura':
+      case 'Jardinagem':
+      case 'Macramé':
+      case 'Yoga':
+
+      cat = 'Hobbies'
+      break
+
+    }
 
     window.onload = function() {
       document.getElementById("title").innerHTML = "Curso de " + title
-      document.getElementById("breadcrumb").innerHTML = title
+      document.getElementById("breadTitle").innerHTML = title
+      document.getElementById("breadCat").innerHTML = "Cursos de " + cat
+      document.getElementById("breadCat").href = "category.html#" + cat
       document.getElementById("buy").href = "buy.html#" + title
       document.getElementById("description").innerHTML = "Este é o vídeo de apresentação do curso de " + title + ". Compre o curso para aceder às aulas. "
     } 
@@ -89,8 +128,8 @@
             <div class = "col-md-10">
                <ol class = "breadcrumb">
                  <li><a href = "index.html#logged">Página Inicial</a></li>
-                 <li><a href = "javascript:window.history.go(-1)">Cursos</a></li>
-                 <li id="breadcrumb" class = "active">Curso</li>
+                 <li><a id="breadCat" href = "javascript:window.history.go(-1)">Cursos</a></li>
+                 <li id="breadTitle" class = "active">Curso</li>
               </ol>
             </div>
             <div class="row">
