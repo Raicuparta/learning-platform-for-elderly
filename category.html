@@ -109,6 +109,7 @@
 
     window.onload = function() {
       document.getElementById("pageTitle").innerHTML = "Cursos de " + cat
+      document.getElementById("breadcrumbTitle").innerHTML = "Cursos de " + cat
 
       for (var i = 0; i < title.length; i++) {
         document.getElementById("title" + i).innerHTML = title[i]
@@ -167,10 +168,10 @@
                <a href="index.html#logged"><button class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span> Voltar</button></a>
                <ol class = "breadcrumb">
                  <li><a href = "index.html#logged">Página Inicial</a></li>
-                 <li class = "active">Cursos de Línguas</li>
+                 <li class = "active" id = "breadcrumbTitle">Cursos de</li>
               </ol>
             </div>
-            <h2 id = "pageTitle">Cursos de Línguas</h2>
+            <h2 id = "pageTitle">Cursos de</h2>
             <div class="col-md-12">
                 <div class="row">
                     <!-- Ingles -->
