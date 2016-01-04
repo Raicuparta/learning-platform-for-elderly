@@ -30,9 +30,49 @@
 
   <script type="text/javascript">
     var title = window.location.hash.substr(1)
+    var cat = ''
+
+    switch (title) {
+      case 'Inglês':
+      case 'Francês':
+      case 'Espanhol':
+      case 'Alemão':
+
+      cat = 'Línguas'
+      break
+
+      case 'Música':
+      case 'Desenho':
+      case 'Esculptura':
+      case 'Olaria':
+
+      cat = 'Artes'
+      break
+
+      case 'Matemática':
+      case 'Física':
+      case 'Química':
+      case 'História':
+      case 'Biologia':
+
+      cat = 'Ciências'
+      break
+
+      case 'Corte e costura':
+      case 'Jardinagem':
+      case 'Macramé':
+      case 'Yoga':
+
+      cat = 'Hobbies'
+      break
+    }
 
     window.onload = function() {
       document.getElementById("title").innerHTML = "Comprar curso de " + title
+      document.getElementById("breadTitle").innerHTML = title
+      document.getElementById("breadTitle").href = "class.html#" + title
+      document.getElementById("breadCat").innerHTML = "Cursos de " + cat
+      document.getElementById("breadCat").href = "category.html#" + cat
 
       var purchases = localStorage.getItem('purchases')
       if (purchases === null) purchases = []
@@ -92,9 +132,9 @@
             <div class = "col-md-10">
               <ol class = "breadcrumb">
                  <li><a href = "index.html#logged">Página Inicial</a></li>
-                 <li><a href = "javascript:window.history.go(-2)">Cursos</a></li>
-                 <li><a href = "javascript:window.history.go(-1)">Curso de Inglês</a></li>
-                 <li class = "active">Comprar curso</li>
+                 <li><a id="breadCat" href = "javascript:window.history.go(-2)">Cursos</a></li>
+                 <li><a id="breadTitle" href = "javascript:window.history.go(-1)">Curso de Inglês</a></li>
+                 <li class = "active">Comprar</li>
               </ol>
             </div>
           <div class="row">
