@@ -33,6 +33,7 @@
     window.onload = function() {
       document.getElementById("title").innerHTML = "Curso de " + title
       document.getElementById("breadcrumb").innerHTML = title
+      document.getElementById("buy").href = "buy.html#" + title
       document.getElementById("description").innerHTML = "Este é o vídeo de apresentação do curso de " + title + ". Compre o curso para aceder às aulas. "
     } 
   </script>
@@ -104,7 +105,7 @@
               </div>
               <div class="col-sm-3 col-lg-3 col-md-3 video-side">
 
-                  <a class="btn btn-warning" href="buy.html"><h5>Comprar curso</h5><h4><span class="glyphicon glyphicon-shopping-cart"></span> 15€</h4></a>
+                  <a id="buy" class="btn btn-warning" href="buy.html"><h5>Comprar curso</h5><h4><span class="glyphicon glyphicon-shopping-cart"></span> 15€</h4></a>
                   <br></br>
                   <div class="dropup">
                     <button class="btn btn-primary dropdown-toggle chat-button" type="button" id="menu1" onclick="toggleDiv();">

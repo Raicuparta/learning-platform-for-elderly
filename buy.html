@@ -28,6 +28,20 @@
 
 <body>
 
+  <script type="text/javascript">
+    var title = window.location.hash.substr(1)
+
+    window.onload = function() {
+      document.getElementById("title").innerHTML = "Comprar curso de " + title
+
+      var purchases = localStorage.getItem('purchases')
+      if (purchases === null) purchases = []
+      else purchases = purchases.split(',')
+      if (purchases.indexOf(title) === -1) purchases.push(title)
+      localStorage.setItem('purchases', purchases)
+    } 
+  </script>
+
   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
           <!-- Brand and toggle get grouped for better mobile display -->
@@ -84,7 +98,7 @@
               </ol>
             </div>
           <div class="row">
-            <h3 class="text-center">Comprar curso</h3>
+            <h3 id="title" class="text-center">Comprar curso</h3>
             <div class="jumbotron col-md-12" >
               <div class="col-md-12">
                 <div class="col-md-6">
