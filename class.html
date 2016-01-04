@@ -27,6 +27,16 @@
 
 <body>
 
+  <script type="text/javascript">
+    var title = window.location.hash.substr(1)
+
+    window.onload = function() {
+      document.getElementById("title").innerHTML = "Curso de " + title
+      document.getElementById("breadcrumb").innerHTML = title
+      document.getElementById("description").innerHTML = "Este é o vídeo de apresentação do curso de " + title + ". Compre o curso para aceder às aulas. "
+    } 
+  </script>
+
   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
           <!-- Brand and toggle get grouped for better mobile display -->
@@ -79,11 +89,11 @@
                <ol class = "breadcrumb">
                  <li><a href = "index.html#logged">Página Inicial</a></li>
                  <li><a href = "javascript:window.history.go(-1)">Cursos</a></li>
-                 <li class = "active">Curso de Inglês</li>
+                 <li id="breadcrumb" class = "active">Curso</li>
               </ol>
             </div>
             <div class="row">
-                <h3>Curso de Inglês - Video de pré-visualização do curso</h3>
+                <h3 id="title">Curso</h3>
             </div>
 
             <div class="row">
@@ -111,9 +121,7 @@
             </div>
 
             <div class="row">
-                <h5>Aprender Inglês é divertido! Curso de 26 aulas. Aprenda a escrever, falar....... E mais coisas e mais coisas
-                e mais coisas e mais coisas e mais coisas e mais coisas e mais coisas e mais coisas e mais coisas e mais coisas
-                e mais coisas e mais coisas e mais coisas e mais coisas e mais coisas e mais coisas e mais coisas e mais coisas</h5>
+                <h5 id="description">Description</h5>
             </div>
         </div>
     </div>

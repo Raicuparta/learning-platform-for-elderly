@@ -112,6 +112,7 @@
       document.getElementById("breadcrumbTitle").innerHTML = "Cursos de " + cat
 
       for (var i = 0; i < title.length; i++) {
+        document.getElementById("url" + i).href = "class.html#" + title[i]
         document.getElementById("title" + i).innerHTML = title[i]
         document.getElementById("desc" + i).innerHTML = description[i]
         document.getElementById("img" + i).src = image[i]
@@ -177,7 +178,7 @@
             <div class="col-md-12">
                 <div class="row">
                     <!-- Ingles -->
-                    <a href="class.html" class="list-group-item">
+                    <a id="url0" href="class.html" class="list-group-item">
                         <div class="row">
                             <div class="col-md-4">
                                 <img id="img0" class="slide-image" width="100" height="150">
@@ -195,7 +196,7 @@
                         </div>
                     </a>
                     <!-- Frances -->
-                    <a href="class.html" class="list-group-item">
+                    <a id="url1" href="class.html" class="list-group-item">
                         <div class="row">
                             <div class="col-md-4">
                                 <img id="img1" class="slide-image" width="100" height="150">
@@ -213,7 +214,7 @@
                         </div>
                     </a>
                     <!-- Espanhol -->
-                    <a href="class.html" class="list-group-item">
+                    <a id="url2" href="class.html" class="list-group-item">
                         <div class="row">
                             <div class="col-md-4">
                                 <img id="img2" class="slide-image" width="100" height="150">
@@ -231,7 +232,7 @@
                         </div>
                     </a>
                     <!-- Alemão -->
-                    <a href="class.html" class="list-group-item">
+                    <a id="url3" href="class.html" class="list-group-item">
                         <div class="row">
                             <div class="col-md-4">
                                 <img id="img3" class="slide-image" width="100" height="150">
