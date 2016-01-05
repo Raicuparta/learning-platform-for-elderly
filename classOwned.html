@@ -26,7 +26,29 @@
 </head>
 
 <body>
+  <script type="text/javascript">
+    var hash = window.location.hash.split('#')
+    var title = hash[1]
+    var index = parseInt(hash[2])
+    if (isNaN(index)) index = 1
 
+    window.onload = function() {
+      document.getElementById("title").innerHTML = "Curso de " + title + " - Aula " + index
+      document.getElementById("breadTitle").innerHTML = title
+      document.getElementById("nextText").innerHTML = "Próxima aula<br>Aula " + (index + 1)
+      document.getElementById("next").href = "#" + title + "#" + (index + 1)
+    
+      for (var i = 1; i < 7; i++) {
+        document.getElementById("title" + i).innerHTML = "Aula " + (index + i)
+        document.getElementById("url" + i).href = "#" + title + "#" + (index + i)
+      }
+
+    } 
+
+    function reload () {
+      location.reload()
+    }
+  </script>
   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
           <!-- Brand and toggle get grouped for better mobile display -->
@@ -79,11 +101,11 @@
                <ol class = "breadcrumb">
                  <li><a href = "index.html#logged">Página Inicial</a></li>
                  <li><a href = "javascript:window.history.go(-1)">Os meus cursos</a></li>
-                 <li class = "active">Curso de Inglês - Aula 1</li>
+                 <li id="breadTitle" class = "active">Curso de Inglês - Aula 1</li>
               </ol>
             </div>
             <div class="row">
-                <h3>Curso de Inglês - Aula 1</h3>
+                <h3 id="title">Curso de Inglês - Aula 1</h3>
             </div>
 
             <div class="row">
@@ -93,7 +115,7 @@
                 </div>
               </div>
               <div class="col-sm-3 col-lg-3 col-md-3 video-side">
-                  <a class="btn btn-warning" href="classOwned.html"><h5>Próxima aula<br>Aula 2</h5><img src="images/nextClass.jpg" class="slide-image" width="100" height="100"></a>
+                  <a onclick="reload()" id="next" class="btn btn-warning" href="classOwned.html"><h5 id="nextText">Próxima aula<br>Aula 2</h5><img src="images/nextClass.jpg" class="slide-image" width="100" height="100"></a>
                   <br></br>
                    <div class="dropup">
                     <button class="btn btn-primary dropdown-toggle chat-button" type="button" id="menu1" onclick="toggleDiv();">
@@ -110,73 +132,73 @@
             </div>
 
             <div class="row">
-                <h5>1ª Aula de Inglês - Nesta aula irá aprender...  </h5>
+                <h5>Descrição do conteúdo da aula...</h5>
             </div>
         </div>
 
         <div>
             <h2 class="text-left">Mais aulas:</h2>
-            <a href="classOwned.html">
+            <a onclick="reload()" id="url1" href="classOwned.html">
             <div class="col-sm-4 col-lg-4 col-md-4">
                 <div class="thumbnail popular-button btn">
                     <img src="images/nextClass.jpg" alt="">
                     <div class="caption">
-                        <h4>Aula 2</h4>
+                        <h4 id="title1">Aula 2</h4>
                     </div>
                 </div>
             </div>
           </a>
 
-            <a href="classOwned.html">
+            <a onclick="reload()" id="url2"  href="classOwned.html">
               <div class="col-sm-4 col-lg-4 col-md-4">
                 <div class="thumbnail popular-button btn">
                     <img src="images/nextClass.jpg" alt="">
                     <div class="caption">
-                        <h4>Aula 3</h4>
+                        <h4 id="title2">Aula 3</h4>
                     </div>
                 </div>
               </div>
             </a>
 
-            <a href="classOwned.html">
+            <a onclick="reload()" id="url3"  href="classOwned.html">
               <div class="col-sm-4 col-lg-4 col-md-4">
                 <div class="thumbnail popular-button btn">
                     <img src="images/nextClass.jpg" alt="">
                     <div class="caption">
-                        <h4>Aula 4</h4>
+                        <h4 id="title3">Aula 4</h4>
                     </div>
                 </div>
               </div>
             </a>
 
-          <a href="classOwned.html">
+          <a onclick="reload()" id="url4"  href="classOwned.html">
             <div class="col-sm-4 col-lg-4 col-md-4">
                 <div class="thumbnail popular-button btn">
                     <img src="images/nextClass.jpg" alt="">
                     <div class="caption">
-                        <h4>Aula 5</h4>
+                        <h4 id="title4">Aula 5</h4>
                     </div>
                 </div>
             </div>
           </a>
 
-          <a href="classOwned.html">
+          <a onclick="reload()" id="url5"  href="classOwned.html">
             <div class="col-sm-4 col-lg-4 col-md-4">
                 <div class="thumbnail popular-button btn">
                     <img src="images/nextClass.jpg" alt="">
                     <div class="caption">
-                        <h4>Aula 6</h4>
+                        <h4 id="title5">Aula 6</h4>
                     </div>
                 </div>
             </div>
           </a>
 
-          <a href="classOwned.html">
+          <a onclick="reload()" id="url6"  href="classOwned.html">
             <div class="col-sm-4 col-lg-4 col-md-4">
                 <div class="thumbnail popular-button btn">
                     <img src="images/nextClass.jpg" alt="">
                     <div class="caption">
-                        <h4>Aula 7</h4>
+                        <h4 id="title6">Aula 7</h4>
                     </div>
                 </div>
             </div>
