@@ -309,3 +309,8 @@ footer {
    content: "/ ";
    padding: 0 5px;
 }
+
+.videoimg {
+    width:100%;
+    height:auto;
+}
