@@ -30,6 +30,7 @@
 
   <script type="text/javascript">
     var title = window.location.hash.substr(1)
+    if (title === '') title = 'Inglês'
     var cat = ''
 
     switch (title) {
@@ -66,7 +67,6 @@
       cat = 'Hobbies'
       break
     }
-
     window.onload = function() {
       document.getElementById("title").innerHTML = "Comprar curso de " + title
       document.getElementById("breadTitle").innerHTML = title
