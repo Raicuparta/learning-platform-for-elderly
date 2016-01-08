@@ -55,62 +55,64 @@
       case "Artes":
         title[0] = "Música"
         description[0] = "Curso de música"
-        image[0] = "images/uk.jpg"
+        image[0] = "images/music.jpg"
 
         title[1] = "Desenho"
         description[1] = "Curso de desenho"
-        image[1] = "images/france.jpg"
+        image[1] = "images/design.jpg"
 
         title[2] = "Esculptura"
         description[2] = "Curso de esculptura"
-        image[2] = "images/spain.jpg"
+        image[2] = "images/troll.jpg"
 
         title[3] = "Olaria"
         description[3] = "Aprender olaria"
-        image[3] = "images/german.jpg"
+        image[3] = "images/ola.jpg"
       break
 
       case "Ciências":
         title[0] = "Matemática"
         description[0] = "Curso de Matemática"
-        image[0] = "images/uk.jpg"
+        image[0] = "images/mat.jpg"
 
         title[1] = "Física"
         description[1] = "Curso de Física"
-        image[1] = "images/france.jpg"
+        image[1] = "images/phy.jpg"
 
         title[2] = "Química"
         description[2] = "Curso deQuímica"
-        image[2] = "images/spain.jpg"
+        image[2] = "images/chem.jpg"
 
         title[3] = "Biologia"
         description[3] = "Curso de Biologia"
-        image[3] = "images/german.jpg"        
+        image[3] = "images/byo.jpg"        
       break
 
       case "Hobbies":
         title[0] = "Corte e costura"
         description[0] = "Curso de corte e costura"
-        image[0] = "images/uk.jpg"
+        image[0] = "images/cor.jpg"
 
         title[1] = "Jardinagem"
         description[1] = "Curso de jardinagem"
-        image[1] = "images/france.jpg"
+        image[1] = "images/jar.jpg"
 
         title[2] = "Macramé"
         description[2] = "Curso de macramé"
-        image[2] = "images/spain.jpg"
+        image[2] = "images/tricot.jpg"
 
         title[3] = "Yoga"
         description[3] = "Curso de yoga"
-        image[3] = "images/german.jpg"     
+        image[3] = "images/yoga.jpg"     
       break
     }
 
     window.onload = function() {
       document.getElementById("pageTitle").innerHTML = "Cursos de " + cat
+      document.getElementById("breadcrumbTitle").innerHTML = "Cursos de " + cat
 
       for (var i = 0; i < title.length; i++) {
+        document.getElementById("url" + i).href = "class.html#" + title[i]
         document.getElementById("title" + i).innerHTML = title[i]
         document.getElementById("desc" + i).innerHTML = description[i]
         document.getElementById("img" + i).src = image[i]
@@ -163,14 +165,20 @@
     <div class="container" id="wrapper">
         <div class="row">
             <footer></footer>
-            <div>
+            <div class="col-md-2">
                <a href="index.html#logged"><button class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span> Voltar</button></a>
             </div>
-            <h2 id = "pageTitle">Cursos de Línguas</h2>
+            <div class = "col-md-10">
+              <ol class = "breadcrumb">
+                 <li><a href = "index.html#logged">Página Inicial</a></li>
+                 <li class = "active" id = "breadcrumbTitle">Cursos de</li>
+              </ol>
+            </div>
+            <h2 id = "pageTitle">Cursos de</h2>
             <div class="col-md-12">
                 <div class="row">
                     <!-- Ingles -->
-                    <a href="class.html" class="list-group-item">
+                    <a id="url0" href="class.html" class="list-group-item">
                         <div class="row">
                             <div class="col-md-4">
                                 <img id="img0" class="slide-image" width="100" height="150">
@@ -188,7 +196,7 @@
                         </div>
                     </a>
                     <!-- Frances -->
-                    <a href="class.html" class="list-group-item">
+                    <a id="url1" href="class.html" class="list-group-item">
                         <div class="row">
                             <div class="col-md-4">
                                 <img id="img1" class="slide-image" width="100" height="150">
@@ -206,7 +214,7 @@
                         </div>
                     </a>
                     <!-- Espanhol -->
-                    <a href="class.html" class="list-group-item">
+                    <a id="url2" href="class.html" class="list-group-item">
                         <div class="row">
                             <div class="col-md-4">
                                 <img id="img2" class="slide-image" width="100" height="150">
@@ -224,7 +232,7 @@
                         </div>
                     </a>
                     <!-- Alemão -->
-                    <a href="class.html" class="list-group-item">
+                    <a id="url3" href="class.html" class="list-group-item">
                         <div class="row">
                             <div class="col-md-4">
                                 <img id="img3" class="slide-image" width="100" height="150">

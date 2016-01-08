@@ -26,14 +26,55 @@
 </head>
 
 <body>
-   <script type="text/javascript">
-    var sent = window.location.hash.substr(1)
-    window.onload = function() {
-      if (sent === "sent") {
-        document.getElementById("answer").className = "text-right"
-        document.getElementById("dropdown").className = "dropdown-menu dropdown-menu-right dropdown-menu-static"
-      }
 
+  <script type="text/javascript">
+    var title = window.location.hash.substr(1)
+    if (title === '') title = 'Inglês'
+    var cat = ''
+
+    switch (title) {
+      case 'Inglês':
+      case 'Francês':
+      case 'Espanhol':
+      case 'Alemão':
+
+      cat = 'Línguas'
+      break
+
+      case 'Música':
+      case 'Desenho':
+      case 'Esculptura':
+      case 'Olaria':
+
+      cat = 'Artes'
+      break
+
+      case 'Matemática':
+      case 'Física':
+      case 'Química':
+      case 'História':
+      case 'Biologia':
+
+      cat = 'Ciências'
+      break
+
+      case 'Corte e costura':
+      case 'Jardinagem':
+      case 'Macramé':
+      case 'Yoga':
+
+      cat = 'Hobbies'
+      break
+
+    }
+
+    window.onload = function() {
+      document.getElementById("title").innerHTML = "Curso de " + title
+      document.getElementById("breadTitle").innerHTML = title
+      document.getElementById("breadCat").innerHTML = "Cursos de " + cat
+      document.getElementById("breadCat").href = "category.html#" + cat
+      document.getElementById("buy").href = "buy.html#" + title
+      document.getElementById("description").innerHTML = "Este é o vídeo de apresentação do curso de " + title + ". Compre o curso para aceder às aulas. "
     } 
   </script>
 
@@ -82,41 +123,44 @@
     <div class="container" id="wrapper">
         <div class="row">
             <footer></footer>
-            <div>
-               <a href="category.html#Línguas"><button class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span> Voltar</button></a>
+            <div class="col-md-2">
+               <a href="javascript:window.history.go(-1)"><button class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span> Voltar</button></a>
+            </div>
+            <div class = "col-md-10">
+               <ol class = "breadcrumb">
+                 <li><a href = "index.html#logged">Página Inicial</a></li>
+                 <li><a id="breadCat" href = "javascript:window.history.go(-1)">Cursos</a></li>
+                 <li id="breadTitle" class = "active">Curso</li>
+              </ol>
             </div>
             <div class="row">
-                <h3>Curso de Inglês - Video de pré-visualização do curso</h3>
+                <h3 id="title">Curso</h3>
             </div>
 
             <div class="row">
               <div class="col-sm-9 col-lg-9 col-md-9">
-                <div class="videoWrapper">
-                  <iframe src="https://www.youtube.com/embed/soyLBNukKuk" frameborder="0" allowfullscreen></iframe>
-                </div>
+                <img src="images/video.jpg" class="videoimg">
               </div>
               <div class="col-sm-3 col-lg-3 col-md-3 video-side">
 
-                  <a class="btn btn-warning" href="buy.html"><h5>Comprar curso</h5><h4><span class="glyphicon glyphicon-shopping-cart"></span> 15€</h4></a>
+                  <a id="buy" class="btn btn-warning" href="buy.html"><h5>Comprar curso</h5><h4><span class="glyphicon glyphicon-shopping-cart"></span> 15€</h4></a>
                   <br></br>
                   <div class="dropup">
-                    <button class="btn btn-primary dropdown-toggle chat-button" type="button" id="menu1" data-toggle="dropdown">
+                    <button class="btn btn-primary dropdown-toggle chat-button" type="button" id="menu1" onclick="toggleDiv();">
                       <span class="glyphicon glyphicon-comment"></span> Contactar Professor <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="menu1" id="dropdown">
-                        <h6>Professor: Boa tarde!</h6>
-                        <h6 class="text-right hidden" id="answer">Eu: Boa tarde!</h6>
+                        <h6 id="quote">Professor: Boa Tarde!</h6>
+                        <h6 id="answer"></h6>
                         <input autofocus type="text" class="form-control" id="chatBox" placeholder="Mensagem">
-                        <a  href="?#sent" class="btn btn-primary send-button">Enviar</a>
+                        <button class="btn btn-primary send-button" onclick="send();">Enviar</button>
                     </ul>
                   </div>
               </div>
             </div>
 
             <div class="row">
-                <h5>Aprender Inglês é divertido! Curso de 26 aulas. Aprenda a escrever, falar....... E mais coisas e mais coisas
-                e mais coisas e mais coisas e mais coisas e mais coisas e mais coisas e mais coisas e mais coisas e mais coisas
-                e mais coisas e mais coisas e mais coisas e mais coisas e mais coisas e mais coisas e mais coisas e mais coisas</h5>
+                <h5 id="description">Description</h5>
             </div>
         </div>
     </div>
@@ -124,6 +168,7 @@
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
+    <script src="js/chat.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>

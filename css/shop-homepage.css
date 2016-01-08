@@ -303,3 +303,14 @@ footer {
 ::-webkit-scrollbar-thumb {
     background: #888
 }​
+
+.breadcrumb > li + li:before {
+   color: #CCCCCC;
+   content: "/ ";
+   padding: 0 5px;
+}
+
+.videoimg {
+    width:100%;
+    height:auto;
+}
